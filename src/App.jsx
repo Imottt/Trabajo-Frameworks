@@ -11,11 +11,11 @@ const productos = [
 
 function App() {
   return (
-    <div className="container py-4">
-      <h1 className="mb-4">Productos</h1>
-      <div className="row g-4">
+    <div className="container mt-5">
+      <h1 className="title mb-5">Productos</h1>
+      <div className="columns is-multiline">
         {productos.map((producto) => (
-          <div key={producto.id} className="col-12 col-sm-6 col-lg-4">
+          <div key={producto.id} className="column is-12 is-half-tablet is-one-third-desktop">
             <ProductCard
               nombre={producto.nombre}
               precio={producto.precio}
