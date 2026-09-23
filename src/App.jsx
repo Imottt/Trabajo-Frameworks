@@ -11,17 +11,18 @@ const productos = [
 
 function App() {
   return (
-    <div className="max-w-6xl mx-auto py-8 px-4">
-      <h1 className="text-3xl font-bold mb-6">Productos</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="container py-5">
+      <h1 className="title">Productos</h1>
+      <div className="columns is-multiline">
         {productos.map((producto) => (
-          <ProductCard
-            key={producto.id}
-            nombre={producto.nombre}
-            precio={producto.precio}
-            imagen={producto.imagen}
-            stock={producto.stock}
-          />
+          <div key={producto.id} className="column is-one-third">
+            <ProductCard
+              nombre={producto.nombre}
+              precio={producto.precio}
+              imagen={producto.imagen}
+              stock={producto.stock}
+            />
+          </div>
         ))}
       </div>
     </div>
@@ -29,4 +30,6 @@ function App() {
 }
 
 export default App
+
+
 
